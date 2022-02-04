@@ -13,12 +13,13 @@ class SignUpScreen extends StatelessWidget {
     TextEditingController? loginController = TextEditingController();
     TextEditingController? pswdController = TextEditingController();
     TextEditingController? pswdConfirmController = TextEditingController();
-    TextStyle baseStyle = const TextStyle(fontSize: 35);
-    TextStyle boldStyle =
-        const TextStyle(fontWeight: FontWeight.bold, fontSize: 35);
-    TextStyle littleStyle = const TextStyle(fontSize: 15);
+    TextStyle baseStyle = const TextStyle(fontSize: 35, color: Colors.black);
+    TextStyle boldStyle = const TextStyle(
+        fontWeight: FontWeight.bold, fontSize: 35, color: Colors.black);
+    TextStyle littleStyle = const TextStyle(fontSize: 15, color: Colors.black);
     return Scaffold(
       bottomNavigationBar: const CustomBottomBar(Color(0xffEB5757)),
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 0.1),
         child: Column(
@@ -70,19 +71,6 @@ class SignUpScreen extends StatelessWidget {
             Expanded(
               child: Container(),
               flex: 1,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12.0),
-              child: TextButton(
-                onPressed: () {},
-                child: const Text(
-                  "Forgot Password ?",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 12),
-                ),
-              ),
             ),
           ],
         ),

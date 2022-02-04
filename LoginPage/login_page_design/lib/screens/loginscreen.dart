@@ -12,10 +12,11 @@ class LoginScreen extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     TextEditingController? loginController = TextEditingController();
     TextEditingController? pswdController = TextEditingController();
-    TextStyle baseStyle = const TextStyle(fontSize: 35);
-    TextStyle boldStyle =
-        const TextStyle(fontWeight: FontWeight.bold, fontSize: 35);
+    TextStyle baseStyle = const TextStyle(fontSize: 35, color: Colors.black);
+    TextStyle boldStyle = const TextStyle(
+        fontWeight: FontWeight.bold, fontSize: 35, color: Colors.black);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: const CustomBottomBar(Color(0xffF2C94C)),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 0.1),
